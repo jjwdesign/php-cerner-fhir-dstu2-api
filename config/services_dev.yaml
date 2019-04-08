@@ -1,0 +1,21 @@
+
+# This file is the entry point to configure your own services.
+# Files in the packages/ subdirectory configure your dependencies.
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
+parameters:
+
+    # Cerner FHIR API
+    app.cerner_fhir:
+        
+        domain: 'todo1'
+        tenantId: 'todo2'
+        authRequired: false
+        serviceRootURL: 'https://fhir-open.sandboxcerner.com/dstu2/0b8a0111-e8e6-4c26-a91c-5069cbc6b1ca'
+        authorizationURL: 'https://fhir-open.sandboxcerner.com/dstu2/0b8a0111-e8e6-4c26-a91c-5069cbc6b1ca'
+        scope: 'system/Appointment.read system/Patient.read system/Patient.write'
+        key: 'todo3'
+        secret: 'todo4'
+
+    # See https://symfony.com/doc/current/service_container.html#service-container-creating-service
